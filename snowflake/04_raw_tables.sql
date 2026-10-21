@@ -19,18 +19,6 @@ CREATE OR REPLACE TABLE HEVY.RAW.USER_INFO (
   is_active BOOLEAN
 );
 
--- CREATE OR REPLACE TABLE HEVY.RAW.DIM_EXERCISE (
---   exercise_id VARCHAR(4) PRIMARY KEY,
---   name VARCHAR,
---   category VARCHAR,
---   body_part VARCHAR,
---   equipment VARCHAR,
---   target VARCHAR,
---   muscle_group VARCHAR,
---   secondary_muscles VARIANT,
---   metadata_status VARCHAR
--- );
-
 CREATE OR REPLACE TABLE HEVY.RAW.WORKOUT_SESSION (
   workout_id NUMBER PRIMARY KEY,
   user_id NUMBER(8,0),
@@ -117,4 +105,8 @@ CREATE OR REPLACE TABLE HEVY.RAW.MEASUREMENT_DATA (
     right_thigh_in NUMBER(5,2),
     left_calf_in NUMBER(5,2),
     right_calf_in NUMBER(5,2)
+);
+
+CREATE OR REPLACE TABLE HEVY.RAW.EXERCISES (
+    RAW_DATA VARIANT
 );
